@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
 <div class="hold-transition register-page">
@@ -50,7 +50,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="icheck-primary">
-                                <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                                <input type="checkbox" id="agreeTerms" name="terms" value="agree" required>
                                 <label for="agreeTerms">
                                     I agree to the <a href="#">terms</a>
                                 </label>
