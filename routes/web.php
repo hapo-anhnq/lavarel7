@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+
+Route::resource('users', 'UserController');
+Route::resource('members', 'MemberController');
+
+Route::get('user/password/change', 'ChangePasswordController@index')->name('password-change.index');;
+Route::post('user/password/change', 'ChangePasswordController@store')->name('password.change');
